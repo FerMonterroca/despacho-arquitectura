@@ -1,0 +1,161 @@
+.process {
+  padding: 120px 0;
+  background: var(--color-light);
+}
+
+.process__header {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+
+  gap: 48px;
+
+  margin-bottom: 72px;
+}
+
+.process__eyebrow {
+  margin: 8px 0 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.process__title {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  font-weight: 400;
+
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.process-step {
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 28px;
+
+  border-right: 1px solid var(--color-border);
+}
+
+.process-step:last-child {
+  border-right: 0;
+}
+
+.process-step__number {
+  color: var(--color-muted);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.1em;
+}
+
+.process-step__content {
+  max-width: 260px;
+}
+
+.process-step__title {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.65rem, 2.2vw, 2.3rem);
+  font-weight: 400;
+
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.process-step__description {
+  margin: 18px 0 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .process {
+    padding: 88px 0;
+  }
+
+  .process__header {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 52px;
+  }
+
+  .process__eyebrow {
+    margin-top: 0;
+  }
+
+  .process__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-step {
+    min-height: 300px;
+  }
+
+  .process-step:nth-child(2) {
+    border-right: 0;
+  }
+
+  .process-step:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 620px) {
+  .process {
+    padding: 72px 0;
+  }
+
+  .process__header {
+    margin-bottom: 42px;
+  }
+
+  .process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    min-height: auto;
+
+    padding: 28px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .process-step:last-child {
+    border-bottom: 0;
+  }
+
+  .process-step__content {
+    max-width: 100%;
+
+    margin-top: 52px;
+  }
+}
